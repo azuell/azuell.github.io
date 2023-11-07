@@ -1,0 +1,173 @@
+/* GENERAL */
+
+/* https://bchanx.com/animated-gameboy-in-css-blog */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* 
+#e0f8cf light green
+#86c06c mid green
+#306850 dark green
+#071821 black 
+*/
+
+:root {
+    --color-green-light: #e0f8cf;
+    --color-green-mid: #86c06c;
+    --color-green-dark: #306850;
+    --color-black: #071821;
+
+    --color-gb-blue: #3232fc;
+    --color-gb-green: #85e367;
+    --color-gb-pink: #ff52e8;
+    --color-gb-red: #ff0151;
+    --color-gb-yellow: #f9e52e;
+    --color-gb-white: #e8e8e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/*body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: white;
+}*/
+
+/* CONTENT */
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* SPLASH SCREEN */
+
+@font-face {
+    font-family: gameboyFont;
+    src: url(./assets/Early\ GameBoy.ttf);
+}
+
+.splash-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-h1 {
+    position: absolute;
+    font-family: gameboyFont;
+    font-size: 30px;
+    letter-spacing: -4px;
+    background-color: white;
+}
+
+/* GAMEBOY STYLE TEXT */
+
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.gameboy-text {
+    position: absolute;
+    font-family: 'Asap', sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -2px;
+    text-align: center;
+    opacity: 0;
+    width: 1562px;
+    /*left: -250px;
+    top: -22px; */
+    -webkit-transform: skew(-5deg);
+    transform: skew(-5deg);
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--color-gb-blue);
+    background: -webkit-linear-gradient(0deg, var(--color-gb-blue) 45%, 
+                                    var(--color-gb-green) 45%, var(--color-gb-green) 50%, 
+                                    var(--color-gb-pink) 50%, var(--color-gb-pink) 55%, 
+                                    var(--color-gb-red) 55%, var(--color-gb-red) 60%,
+                                    var(--color-gb-yellow) 60%, var(--color-gb-yellow) 65%, 
+                                    white 65%);
+    background-position: 406px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: gameboy-text 3s linear;
+    animation: gameboy-text 3s linear;
+    animation-play-state: paused;
+}
+
+@keyframes gameboy-text {
+    0% {
+        color: var(--color-gb-yellow);
+        background-position: -375px;
+        opacity: 0;
+    }
+    11.7% {
+        opacity: 0;
+    }
+    12% {
+        color: var(--color-gb-yellow);
+        background-position: -375px;
+        opacity: 1;
+    }
+    19.5% {
+        color: var(--color-gb-yellow);
+    }
+    21% {
+        color: var(--color-gb-red);
+    }
+    28.5% {
+        color: var(--color-gb-red)
+    }
+    30% {
+        color: var(--color-gb-pink);
+    }
+    37.5% {
+        color: var(--color-gb-pink);
+    }
+    39% {
+        color: var(--color-gb-green);
+    }
+    46.5% {
+        color: var(--color-gb-green);
+    }
+    48% {
+        color: var(--color-gb-blue);
+    }
+    54% {
+        background-position: 375px;
+    }
+    81% {
+        opacity: 1;
+    }
+    96% {
+        opacity: 0;
+    } 
+}   
