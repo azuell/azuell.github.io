@@ -20,6 +20,16 @@ Mobile displays from 360×640 through 414×896.
 
 }
 
+/* Remove bottom scroll bar on splash screen */
+@media screen and (max-width:1588px) {
+    
+    /* GAMEBOY STYLE TEXT */
+
+    .gameboy-text {
+        position: fixed;
+    }
+}
+
 /* Mobile */
 @media screen and (max-width:800px) {
     
