@@ -1,0 +1,82 @@
+/* 
+Desktop             1280×720 through 1920×1080.
+Tablet displays from 601×962 through 1280×800.
+Mobile displays from 360×640 through 414×896.
+*/
+
+
+/* Tablet and Mobile */
+@media screen and (max-width:1280px) {
+
+    /* SPLASH SCREEN */
+    .splash-h1 span {
+        display: none;
+    }
+
+    .splash-h1:after {
+        content: "Tap to enter";
+    }
+
+
+}
+
+/* Mobile */
+@media screen and (max-width:800px) {
+    
+    /* GAMEBOY STYLE TEXT */
+    .gameboy-text {
+        font-size: 50px;
+        width: 780px;
+        background-position: 200px;
+    }
+
+    @keyframes gameboy-text {
+        0% {
+            color: var(--color-gb-yellow);
+            background-position: -200px;
+            opacity: 0;
+        }
+        11.7% {
+            opacity: 0;
+        }
+        12% {
+            color: var(--color-gb-yellow);
+            background-position: -200px;
+            opacity: 1;
+        }
+        19.5% {
+            color: var(--color-gb-yellow);
+        }
+        21% {
+            color: var(--color-gb-red);
+        }
+        28.5% {
+            color: var(--color-gb-red)
+        }
+        30% {
+            color: var(--color-gb-pink);
+        }
+        37.5% {
+            color: var(--color-gb-pink);
+        }
+        39% {
+            color: var(--color-gb-green);
+        }
+        46.5% {
+            color: var(--color-gb-green);
+        }
+        48% {
+            color: var(--color-gb-blue);
+        }
+        54% {
+            background-position: 200px;
+        }
+        81% {
+            opacity: 1;
+        }
+        96% {
+            opacity: 0;
+        } 
+    }  
+}
+

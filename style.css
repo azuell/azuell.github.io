@@ -28,7 +28,7 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: black;
+    
 }
 
 /*body {
@@ -36,16 +36,7 @@
     background-color: white;
 }*/
 
-/* CONTENT */
 
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    
-}
 
 /* SPLASH SCREEN */
 
@@ -74,22 +65,17 @@
     background-color: white;
 }
 
-/* GAMEBOY STYLE TEXT */
+.splash-h1:hover {
+    cursor: default;
+}
 
-
-.loader-wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
+.splash-h1 span {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
+
+/* GAMEBOY STYLE TEXT */
 
 .gameboy-text {
     position: absolute;
@@ -101,8 +87,6 @@
     text-align: center;
     opacity: 0;
     width: 1562px;
-    /*left: -250px;
-    top: -22px; */
     -webkit-transform: skew(-5deg);
     transform: skew(-5deg);
     overflow: hidden;
@@ -121,6 +105,10 @@
     -webkit-animation: gameboy-text 3s linear;
     animation: gameboy-text 3s linear;
     animation-play-state: paused;
+}
+
+.gameboy-text:hover {
+    cursor: default;
 }
 
 @keyframes gameboy-text {
@@ -170,4 +158,21 @@
     96% {
         opacity: 0;
     } 
-}   
+}  
+
+
+/* CONTENT */
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    
+}
+
+.img-me {
+    width: 100%;
+}
