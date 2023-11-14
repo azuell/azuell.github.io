@@ -17,6 +17,10 @@ Mobile displays from 360×640 through 414×896.
         content: "Tap to enter";
     }
 
+    #home {
+        gap: 2rem;
+    }
+
 
 }
 
@@ -28,6 +32,9 @@ Mobile displays from 360×640 through 414×896.
     .gameboy-text {
         position: fixed;
     }
+
+
+    
 }
 
 /* Mobile */

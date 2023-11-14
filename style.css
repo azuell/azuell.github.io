@@ -195,10 +195,70 @@
     } 
 }  
 
+/* HOME PAGE */
+
+section {
+    /* padding-top: 4vh; */
+    /* height: 96vh; */
+    /* margin: 0 10rem; */
+    height: 100svh;
+    box-sizing: border-box;
+    min-height: fit-content;
+    background-color: black;
+    
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/* .home-img-container {
+    width: 12rem;
+    display: flex;
+    margin: auto 0;
+} */
+
+.home-img {
+    display: flex;
+    width: 15rem;
+    margin: auto 0;
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+.text-intro {
+    font-family: gameboyFont;
+    font-size: large;
+    color: white;
+}
+
+.text-smile {
+    font-family: nintendoFont;
+    font-size: large;
+    color: white;
+}
+
+
+
+
+
+
 
 /* CONTENT */
 
-.content {
+/* .content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,11 +266,9 @@
     height: 100%;
     background-color: black;
     
-}
+} */
 
-.img-me {
-    width: 100%;
-}
+
 
 
 
