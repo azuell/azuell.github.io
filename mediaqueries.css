@@ -9,11 +9,11 @@ Mobile displays from 360×640 through 414×896.
 @media screen and (max-width:1280px) {
 
     /* SPLASH SCREEN */
-    .splash-h1 span {
+    .splash-text span {
         display: none;
     }
 
-    .splash-h1:after {
+    .splash-text:after {
         content: "Tap to enter";
     }
 
@@ -22,7 +22,7 @@ Mobile displays from 360×640 through 414×896.
 
 /* Remove bottom scroll bar on splash screen */
 @media screen and (max-width:1588px) {
-    
+
     /* GAMEBOY STYLE TEXT */
 
     .gameboy-text {
@@ -33,6 +33,14 @@ Mobile displays from 360×640 through 414×896.
 /* Mobile */
 @media screen and (max-width:800px) {
     
+    .gb-subtitle-text {
+        font-family: nintendoFont;
+        font-size: 1rem;
+        letter-spacing: -0.2px;
+        background-color: white;
+        display: flex;
+        padding-top: 6rem;
+    }
     /* GAMEBOY STYLE TEXT */
 
     .gameboy-text {
