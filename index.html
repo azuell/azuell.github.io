@@ -15,7 +15,7 @@
     </script>
     <meta name="description" content="Website for the work of Amy Zuell">
 
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
@@ -23,26 +23,30 @@
     <script src=
         "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
-    <script src="/script.js" type="text/javascript"></script>
+    
 
+    
+    
 
 </head>
 
 <body>
 
     <div class="splash-wrapper" onclick="fadeSplash()">
+        <script src="./splash.js" type="text/javascript"></script>
         <h1 class="splash-text"><span>Click to enter</span></h1>
         <div class="gb-wrapper">
             <h1 id="gb-text" class="gameboy-text">AMY ZUELL</h1>
             <p class="gb-subtitle-text">Welcome</p>
-        </div>
-        
-        
+        </div>   
     </div>
 
+    
     <section id="home">
+        <canvas id="mouseCanvas"></canvas>
+        <script src="./mouseme.js" type="text/javascript"></script>
         <div class="home-img-container">
-            <img class="home-img" src="./assets/IMG_04.png">
+            <img class="home-img" src="./assets/me.png">
         </div>
         <div class="home-text">
             <h1 class="text-intro">Hi!</h1>
@@ -50,7 +54,15 @@
             <h1 class="text-intro">This website is under construction as I learn to build it!</h1>
             <h1 class="text-smile">:)</h1>
         </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Amy Zuell with animations from Anastasia Beasley</p>
+        </div>
     </section>
+
+
+    
+
     
 
     

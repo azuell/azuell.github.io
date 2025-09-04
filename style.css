@@ -36,6 +36,14 @@
     background-color: white;
 }*/
 
+canvas, #overlayElement {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    /* pointer-events: auto;  */
+}
+
 
 
 /* SPLASH SCREEN */
@@ -55,6 +63,7 @@
     display: flex; 
     justify-content: center;
     align-items: center;
+    z-index: 1; 
 }
 
 .splash-text {
@@ -72,7 +81,6 @@
 .splash-text span {
     display: flex;
 }
-
 
 
 /* GAMEBOY STYLE TEXT */
@@ -204,7 +212,7 @@ section {
     height: 100svh;
     box-sizing: border-box;
     min-height: fit-content;
-    background-color: black;
+    background-color: var(--color-black);
     
 }
 
@@ -248,6 +256,20 @@ section {
     font-family: nintendoFont;
     font-size: large;
     color: white;
+}
+
+
+/* FOOTER */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: gameboyFont;
+    font-size: small;
+    background-color: --color-black;
+    color: white;
+    text-align: center;
 }
 
 
