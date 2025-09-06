@@ -1,4 +1,5 @@
-// Original script by Anastasia Beasley, modified by Amy Zuell for website
+// Original script by Anastasia Beasley, modified by Amy Zuell for website 2025
+// Animated mini me that chases the mouse to solder it
 
 // Grab canvas objects
 const canvas = document.getElementById("mouseCanvas");

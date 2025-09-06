@@ -1,3 +1,6 @@
+// Amy Zuell 2025
+// Fades out the intro splash screen "Tap to Enter" and Gameboy inspired loading screen
+
 var displaySplash = true;
 
 function fadeSplash() {
@@ -6,7 +9,7 @@ function fadeSplash() {
         $(".splash-text").fadeOut("slow");
 
         setTimeout(function() {
-            var audio = new Audio("./assets/gameboy_startup_audio.mp3");
+            var audio = new Audio("./assets/audio/gameboy_startup_audio.mp3");
             audio.play();
             document.querySelector(".gb-wrapper").style.display = "flex";
             document.querySelector(".gameboy-text").style.animationPlayState = "running";

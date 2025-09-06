@@ -1,6 +1,9 @@
-/* GENERAL */
+/* 
+Amy Zuell 2025
+GENERAL 
+*/
 
-/* https://bchanx.com/animated-gameboy-in-css-blog */
+/* Gameboy text animation: https://bchanx.com/animated-gameboy-in-css-blog */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
@@ -50,7 +53,7 @@ canvas, #overlayElement {
 
 @font-face {
     font-family: gameboyFont;
-    src: url(./assets/Early\ GameBoy.ttf);
+    src: url(./assets/fonts/Early\ GameBoy.ttf);
 }
 
 .splash-wrapper {
@@ -101,7 +104,7 @@ canvas, #overlayElement {
 
 @font-face {
     font-family: nintendoFont;
-    src: url(./assets/PressStart2P-vaV7.ttf);
+    src: url(./assets/fonts/PressStart2P-vaV7.ttf);
 }
 
 .gb-subtitle-text {
