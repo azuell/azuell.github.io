@@ -57,9 +57,9 @@ canvas, #overlayElement {
 }
 
 .splash-wrapper {
-    width: 100%;
+    width: 100vw;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: white;
@@ -67,6 +67,7 @@ canvas, #overlayElement {
     justify-content: center;
     align-items: center;
     z-index: 1; 
+    pointer-events: all;
 }
 
 .splash-text {
@@ -212,21 +213,53 @@ section {
     /* padding-top: 4vh; */
     /* height: 96vh; */
     /* margin: 0 10rem; */
-    height: 100svh;
     box-sizing: border-box;
-    min-height: fit-content;
+    min-height: 100svh;
     background-color: var(--color-black);
     
 }
 
+html {
+    background-color: var(--color-black);
+    
+}
+
+body {
+    min-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    scrollbar-gutter: stable;
+}
+
+body.no-scroll {
+    overflow-y: hidden;
+    pointer-events: none;
+}
+
+body.no-scroll::-webkit-scrollbar {
+    visibility: hidden;
+}
+
 #home {
     display: flex;
-    justify-content: center;
     gap: 5rem;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
+    flex: 1;
 
+}
+
+#mouseCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
 }
 
 /* .home-img-container {
@@ -239,6 +272,7 @@ section {
     display: flex;
     width: 15rem;
     margin: auto 0;
+    margin-top: 5rem;
 }
 
 .home-text {
@@ -261,18 +295,69 @@ section {
     color: white;
 }
 
+/* LINKS */
+#links {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.links {
+    margin-bottom: 3rem;
+}
+
+.link {
+    font-family: gameboyFont;
+    font-size: large;
+    color: white;
+}
+
+.link:link { 
+    color: white;
+}
+
+.link:hover { 
+    color: var(--color-gb-blue);
+}
+
+.link:active { 
+    color: var(--color-gb-red);
+}
+
+.link.visited {
+    color: var(--color-gb-green) !important;
+}
+
+.link.visited:hover {
+    color: var(--color-gb-blue) !important;
+}
+
+.link.visited:active {
+    color: var(--color-gb-red) !important;
+}
+
+.link::after {
+    content: '↗';
+    vertical-align: super;
+    font-size: 0.7em;
+}
 
 /* FOOTER */
 .footer {
-    position: fixed;
+    position: static;
+    padding: 1rem;
     left: 0;
     bottom: 0;
     width: 100%;
     font-family: gameboyFont;
     font-size: small;
-    background-color: --color-black;
+    background-color: var(--color-black);
     color: white;
     text-align: center;
+    margin-top: auto;
 }
 
 

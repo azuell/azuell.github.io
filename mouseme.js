@@ -5,6 +5,9 @@
 const canvas = document.getElementById("mouseCanvas");
 const ctx = canvas.getContext("2d");
 
+// Let clicks pass through the canvas to elements beneath it
+canvas.style.pointerEvents = "none";
+
 // Make canvas match viewport
 function resize() {
     canvas.width = window.innerWidth;
@@ -53,11 +56,10 @@ function loadImages(name, number) {
 
 let runFrames, jumpFrames, solderFrames;
 
-// Cursor tracking
-canvas.addEventListener("mousemove", (e) => {
-    const rect = canvas.getBoundingClientRect();
-    target.x = e.clientX - rect.left;
-    target.y = e.clientY - rect.top;
+// Cursor tracking via window (since no pointer events on canvas)
+window.addEventListener("mousemove", (e) => {
+    target.x = e.clientX;
+    target.y = e.clientY;
 });
 
 // Update animation state
@@ -141,8 +143,11 @@ function update(now) {
     ctx.restore();
 }
 
-// Load assets and start (4 run, 8 jump, 7 solder)
-Promise.all([loadImages("run", 4), loadImages("jump", 8), loadImages("solder", 7)]).then(([r, j, s]) => {
-    runFrames = r; jumpFrames = j; solderFrames = s;
-    requestAnimationFrame(update);
-}).catch(err => console.error(err));
+// Load assets and start (4 run, 8 jump, 7 solder), only after splash done
+window.addEventListener("splash-done", () => {
+    Promise.all([loadImages("run", 4), loadImages("jump", 8), loadImages("solder", 7)]).then(([r, j, s]) => {
+        runFrames = r; jumpFrames = j; solderFrames = s;
+        requestAnimationFrame(update);
+    }).catch(err => console.error(err));
+})
+
