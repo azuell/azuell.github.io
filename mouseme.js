@@ -1,5 +1,6 @@
-// Original script by Anastasia Beasley, modified by Amy Zuell for website 2025
+// Original script by Anastasia Beasley, modified by azuell for website
 // Animated mini me that chases the mouse to solder it
+// r2.20260404 - addressed canvas unable to click thru animations issue
 
 // Grab canvas objects
 const canvas = document.getElementById("mouseCanvas");

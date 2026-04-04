@@ -1,5 +1,7 @@
-// Amy Zuell 2025
+// azuell 
 // Fades out the intro splash screen "Tap to Enter" and Gameboy inspired loading screen
+// r2.20260404 - addressed scrollbar issues
+
 
 var displaySplash = true;
 

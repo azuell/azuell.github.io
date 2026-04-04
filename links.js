@@ -1,4 +1,3 @@
-console.log("links.js running");
 document.querySelectorAll('.link').forEach(link => {
     // Restore visited colour on page load
     if (sessionStorage.getItem('visited-' + link.href)) {
