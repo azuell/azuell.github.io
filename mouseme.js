@@ -63,6 +63,18 @@ window.addEventListener("mousemove", (e) => {
     target.y = e.clientY;
 });
 
+window.addEventListener("touchmove", (e) => {
+    const touch = e.touches[0];
+    target.x = touch.clientX;
+    target.y = touch.clientY;
+}, { passive: true });
+
+window.addEventListener("touchstart", (e) => {
+    const touch = e.touches[0];
+    target.x = touch.clientX;
+    target.y = touch.clientY;
+}, { passive: true });
+
 // Update animation state
 function setState(next) {
     if (state !== next) {
