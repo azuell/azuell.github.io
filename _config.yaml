@@ -1,0 +1,12 @@
+title: Amy Zuell
+description: Website for the work of Amy Zuell
+url: "https://www.amyzuell.com"
+repository: azuell/azuell.github.io
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+collections_dir: blog
+layouts_dir: blog/_layouts
+includes_dir: blog/_includes
+
+include: ["links.js", "mediaqueries.css", "mouseme.js", "splash.js", "style.css"]

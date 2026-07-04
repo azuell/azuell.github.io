@@ -1,4 +1,4 @@
-document.querySelectorAll('.link').forEach(link => {
+document.querySelectorAll('.link, .blog-home-link, .blog-list a, .blog-content a').forEach(link => {
     // Restore visited colour on page load
     if (sessionStorage.getItem('visited-' + link.href)) {
         link.classList.add('visited');

@@ -351,6 +351,7 @@ body.no-scroll::-webkit-scrollbar {
     padding: 1rem;
     left: 0;
     bottom: 0;
+    box-sizing: border-box;
     width: 100%;
     font-family: gameboyFont;
     font-size: small;

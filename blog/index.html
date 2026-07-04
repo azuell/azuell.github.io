@@ -1,0 +1,49 @@
+---
+title: Blog
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog · AZuell</title>
+
+  <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "Blog",
+      "name" : "{{ site.title }} Blog",
+      "url" : "{{ site.url }}/blog/"
+    }
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  
+  <link rel="stylesheet" href="/blog/blog.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="blog-body">
+  <header class="blog-header">
+    <a href="/index.html" class="blog-home-link">← Home</a>
+  </header>
+
+  <main class="blog-list">
+    <h1>Blog</h1>
+    <ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="blog-date">{{ post.date | date: "%B %d, %Y" }}</span>
+      </li>
+    {% endfor %}
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Amy Zuell</p>
+  </footer>
+
+  <script src="/links.js" type="text/javascript"></script>
+</body>
+</html>
