@@ -1,3 +1,8 @@
+document.querySelectorAll('.blog-content a').forEach(link => {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+});
+
 document.querySelectorAll('.link, .blog-home-link, .blog-list a, .blog-content a').forEach(link => {
     // Restore visited colour on page load
     if (sessionStorage.getItem('visited-' + link.href)) {

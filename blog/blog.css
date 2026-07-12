@@ -59,12 +59,57 @@ body.blog-body {
 .blog-content img {
   max-width: 100%;
 }
+.blog-content figure {
+  margin: 0 0 1rem;
+  text-align: center;
+}
+.blog-content figcaption {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 0.4rem;
+}
+.blog-content .img-left,
+.blog-content .img-right,
+.blog-content .img-center {
+  max-width: 45%;
+  margin-bottom: 1rem;
+}
+.blog-content .img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog-content br {
+  display: block;
+  clear: both;
+  margin-top: 1.5rem;
+}
+.blog-content .img-left img,
+.blog-content .img-right img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.blog-content .img-left {
+  float: left;
+  margin-right: 1rem;
+}
+.blog-content .img-right {
+  float: right;
+  margin-left: 1rem;
+}
 
 /* Shared link color states: nav link, post-list links, in-content links */
 .blog-home-link,
 .blog-list a,
 .blog-content a {
   color: white;
+}
+.blog-content a::after {
+  content: '↗';
+  vertical-align: super;
+  font-size: 0.7em;
 }
 .blog-home-link,
 .blog-list a {
