@@ -9,7 +9,7 @@ collections_dir: blog
 layouts_dir: blog/_layouts
 includes_dir: blog/_includes
 
-include: ["links.js", "mediaqueries.css", "mouseme.js", "splash.js", "style.css"]
+include: ["lightbox.js", "links.js", "mediaqueries.css", "mouseme.js", "splash.js", "style.css"]
 
 plugins:
   - jekyll-feed
